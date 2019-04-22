@@ -1,0 +1,7 @@
+{
+  "WeatherStation":"Random",
+  "Latitude": "NormalDistribution",
+  "Longitude": "NormalDistribution",
+  "NumberVisitors":"Random"
+
+}
