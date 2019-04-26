@@ -1,11 +1,12 @@
 import json
 import numpy as np
+from datetime import datetime
 
 
 class BuildData:
 
     def loadTemplate(self,path):
-        with open('template.json') as data_file:    
+        with open(path) as data_file:    
          data = json.load(data_file)
 
         return  data
@@ -22,6 +23,10 @@ class BuildData:
         for key,value in json_object.items():
             if('Random'in value):
                 data[key] = np.random.randint(beginning,end)
+            
+            if('Time' in value):
+                now = datetime.utcnow() # current date and time
+                data[key] =str(now)
 
             if ('NormalDistribution' in value):
                 data[key] = np.random.normal(mu, sigma, arrayLen)[0]
