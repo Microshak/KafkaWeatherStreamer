@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     x = 0
     while(x < MessagesToSend or MessagesToSend == 0):
-        time.sleep(1)
+        time.sleep(0.05)
         x = x+ 1
         MessagesToSend -= MessagesToSend
         message = buildData.getDistribution(template)
